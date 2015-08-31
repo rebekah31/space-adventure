@@ -24,20 +24,19 @@ public class MainActivity extends Activity {
         //setting the layout for our activity
         setContentView(R.layout.activity_main);
 
-        mNameField = (EditText)findViewById(R.id.nameEditText);
-        mStartButton = (Button)findViewById(R.id.startButton);
+        mNameField = (EditText) findViewById(R.id.nameEditText);
+        mStartButton = (Button) findViewById(R.id.startButton);
 
         mStartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String name = mNameField.getText().toString();
                 startStory(name);
-                //Toast.makeText(MainActivity.this, name, Toast.LENGTH_LONG).show();
             }
         });
     }
 
-    private void startStory(String name){
+    private void startStory(String name) {
         Intent intent = new Intent(this, StoryActivity.class);
         intent.putExtra(getString(R.string.key_name), name);
         startActivity(intent);
@@ -48,7 +47,4 @@ public class MainActivity extends Activity {
         super.onResume();
         mNameField.setText("");
     }
-
-
-
 }

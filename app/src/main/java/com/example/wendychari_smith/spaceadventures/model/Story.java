@@ -9,7 +9,7 @@ public class Story {
     //setting member variable for my story array
     private Page[] mPages;
 
-    public Story(){
+    public Story() {
         //creating array of pages
         mPages = new Page[7];
 
@@ -19,11 +19,11 @@ public class Story {
                 "On your return trip from studying Saturn's rings, you hear a distress signal that seems to be coming from the surface of Mars. It's strange because there hasn't been a colony there in years. Even stranger, it's calling you by name: \"Help me, %1$s, you're my only hope.\"",
                 new Choice("Stop and investigate", 1),
                 new Choice("Continue home to Earth", 2));
-                mPages[1] = new Page(
-                        R.drawable.page1,
-                        "You deftly land your ship near where the distress signal originated. You didn't notice anything strange on your fly-by, but there is a cave in front of you. Behind you is an abandoned rover from the early 21st century.",
-                        new Choice("Explore the cave", 3),
-                        new Choice("Explore the rover", 4));
+        mPages[1] = new Page(
+                R.drawable.page1,
+                "You deftly land your ship near where the distress signal originated. You didn't notice anything strange on your fly-by, but there is a cave in front of you. Behind you is an abandoned rover from the early 21st century.",
+                new Choice("Explore the cave", 3),
+                new Choice("Explore the rover", 4));
 
         mPages[2] = new Page(
                 R.drawable.page2,
@@ -52,14 +52,13 @@ public class Story {
                 R.drawable.page6,
                 "You arrive home on Earth. While your mission was a success, you forever wonder what was sending that signal. Perhaps a future mission will be able to investigate...");
         //referencing our story images by id using R in our drawable file
-       // mPages[0].setImageId(R.drawable.page0);
-       // mPages[0].setText("test");
+        // mPages[0].setImageId(R.drawable.page0);
+        // mPages[0].setText("test");
         //mPages[0].setChoice1(new Choice());
-       // mPages[0].setChoice2(new Choice());
+        // mPages[0].setChoice2(new Choice());
     }
 
-    public Page getPage(int pageNumber ){
+    public Page getPage(int pageNumber) {
         return mPages[pageNumber];
-
     }
 }

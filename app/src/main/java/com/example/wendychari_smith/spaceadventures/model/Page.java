@@ -18,7 +18,6 @@ public class Page {
         mText = text;
         mChoice1 = choice1;
         mChoice2 = choice2;
-
     }
 
     public boolean isFinal() {
@@ -35,8 +34,6 @@ public class Page {
         mChoice1 = null;
         mChoice2 = null;
         mIsFinal = true;
-
-
     }
 
     public int getImageId() {

@@ -100,7 +100,7 @@ public class StoryActivity extends Activity {
                 @Override
                 public void onClick(View view) {
                     // Make call to Leader Board API url
-                    new RestfulAPITask().execute(new String[] { "http://leaderboard.peelingpixels.com/new" });
+                    new RestfulAPITask().execute(new String[]{"http://leaderboard.peelingpixels.com/new"});
                     // Finish action happens here
                     finish();
                 }
@@ -168,9 +168,11 @@ public class StoryActivity extends Activity {
         }
 
         @Override
-        protected void onPreExecute() {}
+        protected void onPreExecute() {
+        }
 
         @Override
-        protected void onProgressUpdate(Void... values) {}
+        protected void onProgressUpdate(Void... values) {
+        }
     }
 }
